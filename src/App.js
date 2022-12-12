@@ -39,7 +39,7 @@ function App() {
             console.log(cart);
           },
           updateCart: (newData) => {
-            return setCart([...cart, newData]);
+            setCart([...cart, newData]);
           },
           updateQuantity: (productID, newQuantity) => {
             const updatedQuantity = cart?.map((cartItem) => {
@@ -47,8 +47,9 @@ function App() {
               if (cartItem.product.id === productID) {
                 cartItem.quantity = parsedQuantity;
               }
-              setCart([...cart]);
+              return cartItem;
             });
+            setCart([...updatedQuantity]);
           },
           removeFromCart: (productID) => {
             const filteredCart = cart?.filter((cartItem) => {
