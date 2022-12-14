@@ -7,6 +7,7 @@ import {
   Twitter,
 } from "@mui/icons-material";
 import styled from "styled-components";
+import "./fonts.css";
 
 const Container = styled.div`
   display: flex;
@@ -84,7 +85,7 @@ const ContactItem = styled.div`
 
 const Footer = () => {
   return (
-    <Container>
+    <Container className="font-style">
       <Left>
         <Logo>CHOCOMIL</Logo>
         <Desc>

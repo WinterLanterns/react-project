@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Newsletter from "../components/Newsletter";
 import { CartContext } from "../components/CartContext";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import "./style.css";
 
 const Main = styled.main`
   max-width: 100vw;
@@ -188,7 +189,7 @@ export default function ProductList(props) {
 
   const productList = (
     <>
-      <Heading>Categories</Heading>
+      <Heading className="heading-font">Categories</Heading>
       <Main>
         <Form>
           <form onSubmit={handleSubmit}>

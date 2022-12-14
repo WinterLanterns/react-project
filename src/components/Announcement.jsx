@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "./fonts.css";
 
 const Container = styled.div`
   height: 30px;
@@ -13,7 +14,11 @@ const Container = styled.div`
 `;
 
 const Announcement = () => {
-  return <Container>Free Shipping on Orders Over $10000...Maybe</Container>;
+  return (
+    <Container className="font-style">
+      Free Shipping on Orders Over $10000...Maybe
+    </Container>
+  );
 };
 
 export default Announcement;

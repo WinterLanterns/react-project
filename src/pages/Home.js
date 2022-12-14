@@ -4,9 +4,11 @@ import Newsletter from "../components/Newsletter";
 import Slider from "../components/Slider";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import "./style.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Main = styled.div`
-  height: 100vh;
+  height: auto;
   text-align: center;
   margin-top: 150px;
 `;
@@ -30,7 +32,7 @@ const Text = styled.div`
 `;
 
 const Hr = styled.hr`
-  background-color: #eee;
+  background-color: #000;
   border: none;
   height: 1px;
   width: 75%;
@@ -60,10 +62,10 @@ function Home() {
     <div>
       <Slider></Slider>
       <HomeDetails />
-      <Main>
-        <Heading>Power of Beauty</Heading>
-        <Hr />
-        <Text>
+      <Main className="container my-auto">
+        <Heading className="heading-font mt-5 ">Power of Beauty</Heading>
+        <Hr className="row" />
+        <Text className="para-font col-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco
@@ -71,12 +73,12 @@ function Home() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut
         </Text>
-        <Text>
+        <Text className="para-font col-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco.
         </Text>
-        <Text>
+        <Text className="para-font col-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit
@@ -84,9 +86,11 @@ function Home() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt.
         </Text>
-        <Button to="/products">SHOP NOW!</Button>
+        <Button className="mb-5" to="/products">
+          SHOP NOW!
+        </Button>
       </Main>
-      <Newsletter />
+      <Newsletter className="container" />
     </div>
   );
 }

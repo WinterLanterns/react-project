@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import "./fonts.css";
 
 const Container = styled.header`
   display: flex;
@@ -21,7 +22,7 @@ const Image = styled.img`
 const LogoTitle = styled(Link)`
   text-align: center;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 30px;
   text-decoration: none;
   color: black;
@@ -42,7 +43,9 @@ export default function Header(props) {
   return (
     <Container>
       <Image src="https://i.ibb.co/6tw8N0Y/sun.png"></Image>
-      <LogoTitle to="/">CHOCOMIL</LogoTitle>
+      <LogoTitle className="font-style" to="/">
+        CHOCOMIL
+      </LogoTitle>
       <Right>
         <Navbar />
       </Right>

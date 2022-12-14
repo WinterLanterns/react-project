@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Marcellus&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/*
+font-family: 'Major Mono Display', monospace;
+font-family: 'Marcellus', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+ */
+
+.heading-font {
+  font-family: "Open Sans", sans-serif;
+}
+
+.para-font {
+  font-family: "Open Sans", sans-serif;
+}

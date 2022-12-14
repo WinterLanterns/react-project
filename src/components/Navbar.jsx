@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { CartContext } from "./CartContext";
+import "./fonts.css";
 
 const Nav = styled.nav`
   display: flex;
@@ -30,8 +31,10 @@ function Navbar() {
   const cart = useContext(CartContext);
 
   return (
-    <Nav>
-      <MenuItems to="/">HOME</MenuItems>
+    <Nav className="font-style">
+      <MenuItems className="font-style" to="/">
+        HOME
+      </MenuItems>
       <MenuItems to="/products">PRODUCTS</MenuItems>
       <MenuItems to="/cart">
         <Badge badgeContent={cart.cart.length} color="error">
